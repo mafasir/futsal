@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Court — Dot M Futsal</title>
+<meta name="description" content="Book a futsal court at Dot M Futsal. Live availability, instant price calculation and an instant confirmation reference. Open 6 AM to 11 PM, all 7 days.">
+<meta name="theme-color" content="#070d14">
+<link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<div class="scroll-progress" role="presentation"></div>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="Dot M Futsal home">
+      <img src="assets/img/logo.svg" alt="" width="40" height="40">
+      <span class="brand-text">
+        <span class="brand-name">Dot <em>M</em> Futsal</span>
+        <span class="brand-tag">Play · Train · Win</span>
+      </span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navLinks">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="tournaments.html">Tournaments</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a class="btn btn-sm nav-cta" href="booking.html">Book a Court</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> <svg class="ico"><use href="#i-chevron-right"></use></svg> Booking</p>
+      <span class="eyebrow"><span class="dot"></span> Instant confirmation</span>
+      <h1>Book your court</h1>
+      <p>Pick a court, a date and a time. Your slot is blocked the second you confirm — and you get a reference number instantly.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:1rem">
+    <div class="container split" style="align-items:start">
+
+      <!-- ===== FORM ===== -->
+      <div class="form-card reveal">
+        <h2 style="font-size:1.5rem">Booking details</h2>
+        <form id="bookingForm" novalidate>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="bCourt">Court <span class="req">*</span></label>
+              <select id="bCourt" name="court" required>
+                <option value="Court 1 — Pro Indoor">Court 1 — Pro Indoor (₹1,200/hr)</option>
+                <option value="Court 2 — Training Pitch">Court 2 — Training Pitch (₹900/hr)</option>
+                <option value="Court 3 — 3x3 Mini Arena">Court 3 — 3x3 Mini Arena (₹700/hr)</option>
+              </select>
+              <p class="err"></p>
+            </div>
+
+            <div class="field">
+              <label for="bDate">Date <span class="req">*</span></label>
+              <input type="date" id="bDate" name="date" required>
+              <p class="err"></p>
+            </div>
+          </div>
+
+          <div class="field" id="slotField">
+            <label>Available time slots <span class="req">*</span></label>
+            <div id="slotWrap"><p class="hint">Pick a date to see availability.</p></div>
+            <p class="err"></p>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="bDuration">Duration</label>
+              <select id="bDuration" name="duration">
+                <option value="1">1 hour</option>
+                <option value="2">2 hours</option>
+                <option value="3">3 hours</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="bPlayers">Number of players <span class="req">*</span></label>
+              <input type="number" id="bPlayers" name="players" min="4" max="20" step="1" value="10" required>
+              <p class="hint">Min 4 · Max 20</p>
+              <p class="err"></p>
+            </div>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="bName">Full name <span class="req">*</span></label>
+              <input type="text" id="bName" name="name" placeholder="e.g. Rahul Sharma" autocomplete="name" required>
+              <p class="err"></p>
+            </div>
+            <div class="field">
+              <label for="bPhone">Phone <span class="req">*</span></label>
+              <input type="tel" id="bPhone" name="phone" placeholder="e.g. 98765 43210" autocomplete="tel" required>
+              <p class="err"></p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bEmail">Email <span class="req">*</span></label>
+            <input type="email" id="bEmail" name="email" placeholder="you@example.com" autocomplete="email" required>
+            <p class="err"></p>
+          </div>
+
+          <div class="row-2">
+            <div class="field">
+              <label for="bTeam">Team name <small>(optional)</small></label>
+              <input type="text" id="bTeam" name="team" placeholder="e.g. FC Blue Street">
+            </div>
+            <div class="field">
+              <label for="bCoach">Add a coach? <small>(optional)</small></label>
+              <select id="bCoach" name="coach">
+                <option value="No">No, just the court</option>
+                <option value="Yes — Level 1">Yes — Level 1 (₹400)</option>
+                <option value="Yes — Level 2">Yes — Level 2 (₹700)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="bNotes">Notes for the front desk <small>(optional)</small></label>
+            <textarea id="bNotes" name="notes" placeholder="Extra bibs, ball request, birthday setup, accessibility needs..."></textarea>
+          </div>
+
+          <div class="field">
+            <label class="check">
+              <input type="checkbox" id="bAgree" name="agree">
+              <span>I confirm the slot and accept the <a href="contact.html">cancellation policy</a> — free cancellation up to 12 hours before the booking. <span class="req">*</span></span>
+            </label>
+            <p class="err"></p>
+          </div>
+
+          <!-- live summary -->
+          <div class="summary">
+            <h4><svg class="ico"><use href="#i-badge"></use></svg>Your booking summary</h4>
+            <dl id="bSummary"></dl>
+          </div>
+
+          <button class="btn btn-block" type="submit" style="margin-top:1.3rem">Confirm Booking</button>
+          <p class="form-note">
+            This demo stores your booking in your browser (localStorage) so the slot is actually blocked.
+            No payment is taken and no data leaves your device.
+          </p>
+        </form>
+
+        <!-- confirmation -->
+        <div class="confirm-box" id="bookingConfirm" hidden>
+          <h3>Booking confirmed</h3>
+          <p>Reference <span class="ref-chip" id="confRef">—</span></p>
+          <ul id="confDetails"></ul>
+          <div class="hero-actions" style="margin:1.2rem 0 0">
+            <button class="btn btn-sm" type="button" id="printBooking">Print / Save</button>
+            <a class="btn btn-sm btn-outline" href="contact.html">Need to change something?</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ===== SIDE INFO ===== -->
+      <aside class="stack reveal d1">
+        <div class="card">
+          <h3>What is included</h3>
+          <ul class="card-list">
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Match-quality futsal balls &amp; cones</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Team bibs (2 colours)</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>FIFA-spec goals with net check</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Changing rooms, lockers &amp; hot showers</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Drinking water &amp; first-aid on site</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Free parking (40 two-wheelers, 15 cars)</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Booking rules</h3>
+          <ul class="card-list">
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Arrive 10 minutes early — grace period is 10 min</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Non-defective shoes only (no spikes, no gum soles)</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Kids under 12 need an adult on the court</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Max 3 hours per booking for fair rotation</span></li>
+            <li><svg class="ico"><use href="#i-check"></use></svg><span>Free reschedule once per booking</span></li>
+          </ul>
+        </div>
+
+        <div class="card" style="padding:0;overflow:hidden">
+          <img src="assets/img/court-1.svg" alt="Pro indoor futsal court" width="600" height="400" style="border-radius:0;border:0">
+          <div style="padding:1.3rem 1.5rem">
+            <h3>Prefer to talk?</h3>
+            <p style="margin-bottom:1rem">Front desk answers between 6 AM and 11 PM. Walk-in slots are kept for same-day play.</p>
+            <a class="btn btn-sm btn-outline btn-block" href="tel:+919000012345">Call +91 90000 12345</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Your bookings on this device</h3>
+          <div id="myBookings" style="margin-top:.8rem"></div>
+          <button class="btn btn-sm btn-outline btn-block" type="button" id="resetBookings" style="margin-top:1rem">
+            Clear saved bookings
+          </button>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about">
+        <a class="brand" href="index.html" style="margin-bottom:1rem">
+          <img src="assets/img/logo.svg" alt="" width="40" height="40">
+          <span class="brand-text">
+            <span class="brand-name">Dot <em>M</em> Futsal</span>
+            <span class="brand-tag">Play · Train · Win</span>
+          </span>
+        </a>
+        <p>A player-first indoor futsal complex built for training, competing and having fun.</p>
+        <div class="socials">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg class="ico"><use href="#i-instagram"></use></svg></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ico"><use href="#i-facebook"></use></svg></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ico"><use href="#i-youtube"></use></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="facilities.html">Facilities</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="tournaments.html">Tournaments</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Play</h4>
+        <ul>
+          <li><a href="booking.html">Book a Court</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Opening Hours</h4>
+        <div class="hours">
+          <div><span>Mon – Fri</span><b>6:00 – 23:00</b></div>
+          <div><span>Saturday</span><b>6:00 – 23:00</b></div>
+          <div><span>Sunday</span><b>7:00 – 22:00</b></div>
+        </div>
+        <p style="margin-top:1rem">
+          <a href="tel:+919000012345">+91 90000 12345</a><br>
+          <a href="mailto:play@dotmfutsal.in">play@dotmfutsal.in</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-year>2025</span> Dot M Futsal. All rights reserved.</span>
+      <span>Built with plain HTML, CSS &amp; JavaScript — no frameworks.</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" aria-label="Back to top"><svg class="ico"><use href="#i-arrow-up"></use></svg></button>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" width="900" height="620" role="img" aria-label="Indoor futsal court with players">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1b2b"/>
+      <stop offset="1" stop-color="#123047"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1f6f4a"/>
+      <stop offset="1" stop-color="#0e3d29"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".38"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="30%" r="60%">
+      <stop offset="0" stop-color="#00e676" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#00e676" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="620" fill="url(#sky)"/>
+  <rect width="900" height="620" fill="url(#glow)"/>
+
+  <!-- back wall panels -->
+  <g opacity=".5">
+    <rect x="0" y="60" width="900" height="14" fill="#ffffff" opacity=".08"/>
+    <rect x="0" y="120" width="900" height="8" fill="#ffffff" opacity=".06"/>
+  </g>
+
+  <!-- perspective floor -->
+  <path d="M0 620 L250 300 L650 300 L900 620 Z" fill="url(#floor)"/>
+  <g stroke="#ffffff" stroke-opacity=".35" fill="none" stroke-width="3">
+    <path d="M0 620 L250 300"/>
+    <path d="M900 620 L650 300"/>
+    <path d="M160 620 L340 300"/>
+    <path d="M740 620 L560 300"/>
+    <path d="M330 620 L400 300"/>
+    <path d="M570 620 L500 300"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity=".25" fill="none" stroke-width="3">
+    <path d="M0 500 L900 500"/>
+    <path d="M40 575 L860 575"/>
+    <path d="M100 420 L800 420"/>
+    <path d="M160 350 L740 350"/>
+  </g>
+
+  <!-- goals -->
+  <g fill="none" stroke="#e8f7ff" stroke-width="6" opacity=".9">
+    <path d="M60 300 L60 400 L215 400 L215 300"/>
+    <path d="M840 300 L840 400 L685 400 L685 300"/>
+  </g>
+  <g fill="none" stroke="#e8f7ff" stroke-width="1.5" opacity=".35">
+    <path d="M60 300 L215 300 M60 320 L215 320 M60 340 L215 340 M60 360 L215 360 M60 380 L215 380"/>
+    <path d="M840 300 L685 300 M840 320 L685 320 M840 340 L685 340 M840 360 L685 360 M840 380 L685 380"/>
+  </g>
+
+  <!-- light beams -->
+  <g fill="url(#beam)">
+    <path d="M300 0 L360 0 L470 320 L380 320 Z"/>
+    <path d="M540 0 L600 0 L520 320 L430 320 Z"/>
+  </g>
+
+  <!-- ball -->
+  <g transform="translate(452 300)">
+    <circle r="26" fill="#ffffff"/>
+    <path d="M0 -26 L12 -13 L0 0 L-12 -13 Z" fill="#111827"/>
+    <path d="M0 26 L12 13 L0 0 L-12 13 Z" fill="#111827"/>
+    <path d="M-26 0 L-13 -12 L0 0 L-13 12 Z" fill="#111827"/>
+    <path d="M26 0 L13 -12 L0 0 L13 12 Z" fill="#111827"/>
+    <circle r="26" fill="none" stroke="#0b1b2b" stroke-width="3"/>
+  </g>
+
+  <!-- players -->
+  <g transform="translate(300 400)">
+    <circle cx="0" cy="-64" r="20" fill="#ffb300"/>
+    <path d="M-22 -42 L22 -42 L28 10 L-28 10 Z" fill="#00b0ff"/>
+    <path d="M-22 -40 L-44 -18" stroke="#ffb300" stroke-width="9" stroke-linecap="round"/>
+    <path d="M22 -40 L44 -26" stroke="#ffb300" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-10 10 L-14 66" stroke="#0b1b2b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M10 10 L16 66" stroke="#0b1b2b" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="0" cy="72" rx="34" ry="7" fill="#000" opacity=".3"/>
+  </g>
+  <g transform="translate(620 400)">
+    <circle cx="0" cy="-64" r="20" fill="#ff7043"/>
+    <path d="M-22 -42 L22 -42 L28 10 L-28 10 Z" fill="#e53935"/>
+    <path d="M-22 -40 L-46 -60" stroke="#ff7043" stroke-width="9" stroke-linecap="round"/>
+    <path d="M22 -40 L40 -8" stroke="#ff7043" stroke-width="9" stroke-linecap="round"/>
+    <path d="M-10 10 L-16 66" stroke="#0b1b2b" stroke-width="12" stroke-linecap="round"/>
+    <path d="M10 10 L12 66" stroke="#0b1b2b" stroke-width="12" stroke-linecap="round"/>
+    <ellipse cx="0" cy="72" rx="34" ry="7" fill="#000" opacity=".3"/>
+  </g>
+  <g transform="translate(760 340)">
+    <circle cx="0" cy="-58" r="18" fill="#8d6e63"/>
+    <path d="M-20 -38 L20 -38 L26 8 L-26 8 Z" fill="#ffffff" opacity=".9"/>
+    <path d="M-10 8 L-14 60" stroke="#0b1b2b" stroke-width="11" stroke-linecap="round"/>
+    <path d="M10 8 L16 60" stroke="#0b1b2b" stroke-width="11" stroke-linecap="round"/>
+    <ellipse cx="0" cy="66" rx="30" ry="6" fill="#000" opacity=".3"/>
+  </g>
+
+  <!-- crowd dots -->
+  <g fill="#ffffff" opacity=".18">
+    <circle cx="60" cy="200" r="6"/><circle cx="100" cy="230" r="6"/><circle cx="140" cy="205" r="6"/>
+    <circle cx="760" cy="205" r="6"/><circle cx="800" cy="230" r="6"/><circle cx="840" cy="200" r="6"/>
+  </g>
+</svg>

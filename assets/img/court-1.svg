@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Futsal Court 1 - Pro indoor pitch">
+  <defs>
+    <linearGradient id="c1f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a7d55"/><stop offset="1" stop-color="#0f3f2a"/></linearGradient>
+    <linearGradient id="c1w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123047"/><stop offset="1" stop-color="#0a1723"/></linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#c1w)"/>
+  <rect y="90" width="600" height="310" fill="url(#c1f)"/>
+  <g stroke="#ffffff" stroke-opacity=".85" fill="none" stroke-width="4">
+    <rect x="40" y="120" width="520" height="250"/>
+    <path d="M40 245 H300 M560 245 H300"/>
+    <circle cx="300" cy="245" r="62"/>
+    <path d="M40 190 A 55 55 0 0 1 95 190"/>
+    <path d="M560 190 A 55 55 0 0 0 505 190"/>
+  </g>
+  <g fill="none" stroke="#e8f7ff" stroke-width="7">
+    <path d="M40 200 V120 H140"/><path d="M560 200 V120 H460"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity=".3" stroke-width="2">
+    <path d="M0 300 H600"/><path d="M0 340 H600"/>
+  </g>
+  <g fill="#ffffff" opacity=".1"><circle cx="70" cy="60" r="7"/><circle cx="530" cy="60" r="7"/></g>
+</svg>

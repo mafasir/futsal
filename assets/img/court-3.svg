@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400" role="img" aria-label="Futsal Court 3 - 3x3 mini arena">
+  <defs>
+    <linearGradient id="c3f" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4b8f"/><stop offset="1" stop-color="#0b2547"/></linearGradient>
+    <linearGradient id="c3w" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0f2a3d"/><stop offset="1" stop-color="#08151f"/></linearGradient>
+  </defs>
+  <rect width="600" height="400" fill="url(#c3w)"/>
+  <rect y="90" width="600" height="310" fill="url(#c3f)"/>
+  <g stroke="#ffffff" stroke-opacity=".85" fill="none" stroke-width="4">
+    <rect x="150" y="130" width="300" height="230"/>
+    <path d="M150 245 H300 M450 245 H300"/>
+    <circle cx="300" cy="245" r="52"/>
+  </g>
+  <g fill="none" stroke="#00e5ff" stroke-width="9" opacity=".95">
+    <path d="M150 200 V130 H250"/><path d="M450 200 V130 H350"/>
+  </g>
+  <g fill="#00e5ff" opacity=".18">
+    <circle cx="90" cy="180" r="10"/><circle cx="510" cy="180" r="10"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity=".22" stroke-width="2">
+    <path d="M0 300 H600"/><path d="M0 340 H600"/>
+  </g>
+</svg>
